@@ -132,8 +132,8 @@ public class ListaEncadeada {
         
         newNode.next = p;
         newNode.prev = p.prev;
-        p.prev = newNode;
         p.prev.next = newNode;
+        p.prev = newNode;
         
         size++;
         return newNode;
@@ -150,8 +150,9 @@ public class ListaEncadeada {
         
         newNode.prev = p;
         newNode.next = p.next;
-        p.next = newNode;
         p.next.prev = newNode;
+        p.next = newNode;
+        
         
         size++;
         return newNode;

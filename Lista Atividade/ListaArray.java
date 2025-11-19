@@ -12,10 +12,9 @@ public class ListaArray {
     }
 
     public ListaArray() {
-        this(10); // capacidade padrão
+        this(10); 
     }
 
-    // métodos genéricos
     public int size() {
         return size;
     }
@@ -24,7 +23,6 @@ public class ListaArray {
         return size == 0;
     }
 
-    // métodos de verificação
     public boolean isFirst(int pos) {
         if (pos < 0 || pos >= size) {
             throw new IndexOutOfBoundsException("posição inválida");
@@ -39,7 +37,6 @@ public class ListaArray {
         return pos == size - 1;
     }
 
-    // métodos para acessar
     public int first() {
         if (isEmpty()) {
             throw new IllegalStateException("lista vazia");
@@ -68,7 +65,6 @@ public class ListaArray {
         return p + 1;
     }
 
-    // métodos para atualizar
     public Object replaceElement(int pos, Object o) {
         if (pos < 0 || pos >= size) {
             throw new IndexOutOfBoundsException("posição inválida");
@@ -160,7 +156,6 @@ public class ListaArray {
         return removido;
     }
 
-    // método auxiliar para redimensionar
     private void redimensionar(int novaCapacidade) {
         Object[] novoArray = new Object[novaCapacidade];
         
